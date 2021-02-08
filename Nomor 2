@@ -1,0 +1,18 @@
+<?php
+
+// nilai array
+$x = array(1,5,6,1,0,1);
+
+// nilai input
+$y = 6;
+
+for ($i=0; $i < count($x) ; $i++) { 
+    for ($j=0; $j < count($x); $j++) { 
+        if($x[$i] + $x[$j] == $y){
+          print $x[$i];
+          print $x[$y];
+        }else{
+          print ("\n");
+        }
+    }
+}
