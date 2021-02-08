@@ -1,0 +1,11 @@
+<?php
+
+//urutan bilangan bulat 1-10
+$x = array(1,2,3,4,5,6,8,9,10);
+
+//batas dari array
+$bts = range(1,10);
+
+
+$missing = array_diff($bts, $x);
+print "Y = " . implode(', ', $missing);
