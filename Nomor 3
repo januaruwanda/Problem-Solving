@@ -1,0 +1,30 @@
+<?php
+
+// variabel bus berisi 2 array
+  $bus = array(
+  0 => array(
+    0 => array('kolom'=>'1,2,3'),
+    1 => array('kolom'=>'6,7,8'),
+    2 => array('kolom'=>'11,12,13')
+  ),
+  1 => array(
+    0 => array('kolom'=>'4,5'),
+    1 => array('kolom'=>'9,10'),
+    2 => array('kolom'=>'14,15'),
+  ),
+  
+  );
+ 
+function sort_by_col(&$tmp_array, $kolom, $arah = SORT_ASC) {
+  $urut = array();
+  foreach ($tmp_array as $k => $v) {
+    $urut[$k] = $v[$kolom];
+  }
+  array_multisort($urut, $arah, $tmp_array);
+}
+ 
+sort_by_col($bus, 'kolom', SORT_ASC);
+ 
+
+echo '<pre>'; 
+print_r($bus);
